@@ -17,7 +17,7 @@ nodeGroups:
     minSize: 1
     maxSize: 3
     instancesDistribution:
-      instanceTypes: "m5.large"
+      instanceTypes: ["m5.large"]
       #   - "m5.large"  # Use array format (with - for items)
       onDemandBaseCapacity: 0
       onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
