@@ -5,13 +5,19 @@ metadata:
   name: expense-1
   region: us-east-1
 
+# nodeGroups:
+#   - name: expense
+#     instanceType: m5.large
+#     desiredCapacity: 3
+#     spot: true
+
 nodeGroups:
   - name: expense-ng
     desiredCapacity: 2
     minSize: 1
     maxSize: 3
     instancesDistribution:
-      instanceTypes: "t5.medium" # Cost-efficient burstable types
+      instanceTypes: m5.large # Cost-efficient burstable types
       onDemandBaseCapacity: 0
       onDemandPercentageAboveBaseCapacity: 20  # Small fallback to On-Demand
       spotInstancePools: 3
