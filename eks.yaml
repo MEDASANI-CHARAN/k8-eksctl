@@ -11,11 +11,24 @@ metadata:
 #     desiredCapacity: 3
 #     spot: true
 
+# nodeGroups:
+#   - name: expense
+#     desiredCapacity: 3
+#     instanceTypes: 
+#       - "m5.large"  # Specify one or more spot-eligible instance types
+#     instancesDistribution:
+#       instanceTypes: ["m5.large"]
+#       #   - "m5.large"  # Use array format (with - for items)
+#       onDemandBaseCapacity: 0
+#       onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
+#       spotInstancePools: 2
+
+
 nodeGroups:
-  - name: expense
-    desiredCapacity: 3
-    instanceTypes: 
-      - "m5.large"  # Specify one or more spot-eligible instance types
+  - name: expense-ng
+    desiredCapacity: 2
+    minSize: 1
+    maxSize: 3
     instancesDistribution:
       instanceTypes: ["m5.large"]
       #   - "m5.large"  # Use array format (with - for items)
@@ -23,20 +36,5 @@ nodeGroups:
       onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
       spotInstancePools: 2
     volumeSize: 20
-
-
-
-# nodeGroups:
-#   - name: expense-ng
-#     desiredCapacity: 2
-#     minSize: 1
-#     maxSize: 3
-#     instancesDistribution:
-#       instanceTypes: ["m5.large"]
-#       #   - "m5.large"  # Use array format (with - for items)
-#       onDemandBaseCapacity: 0
-#       onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
-#       spotInstancePools: 2
-#     volumeSize: 20
-#     ssh:
-#       allow: false
+    ssh:
+      allow: false
