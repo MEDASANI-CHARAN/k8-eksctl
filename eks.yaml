@@ -5,11 +5,20 @@ metadata:
   name: expense-1
   region: us-east-1
 
+# nodeGroups:
+#   - name: expense
+#     instanceType: m5.large
+#     desiredCapacity: 3
+#     spot: true
+
 nodeGroups:
   - name: expense
-    instanceType: m5.large
     desiredCapacity: 3
-    spot: true
+    instanceTypes: ["m5.large"]  # Specify one or more spot-eligible instance types
+    instancesDistribution:
+      onDemandBaseCapacity: 0
+      onDemandPercentageAboveBaseCapacity: 0
+
 
 # nodeGroups:
 #   - name: expense-ng
