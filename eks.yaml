@@ -14,7 +14,8 @@ metadata:
 managedNodeGroups:
   - name: expense
     desiredCapacity: 3
-    instanceTypes: ["m5.large"]  # Specify one or more spot-eligible instance types
+    instanceTypes: 
+      - "m5.large"  # Specify one or more spot-eligible instance types
     capacityType: SPOT
     # instancesDistribution:
     #   onDemandBaseCapacity: 0
