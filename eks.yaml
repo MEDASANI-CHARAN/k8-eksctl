@@ -11,7 +11,7 @@ metadata:
 #     desiredCapacity: 3
 #     spot: true
 
-managedNodeGroups:
+nodeGroups:
   - name: expense
     desiredCapacity: 3
     instanceTypes: 
@@ -19,7 +19,7 @@ managedNodeGroups:
     instancesDistribution:
       onDemandBaseCapacity: 0
       onDemandPercentageAboveBaseCapacity: 0
-      spotInstancePools: 2
+      spotInstancePools: 0
 
 
 # nodeGroups:
