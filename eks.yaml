@@ -21,7 +21,7 @@ managedNodeGroups:
       #   - "m5.large"  # Use array format (with - for items)
       onDemandBaseCapacity: 0
       onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
-      # spotInstancePools: 0
+      spotInstancePools: 0
 
 
 # nodeGroups:
