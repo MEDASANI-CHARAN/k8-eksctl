@@ -16,10 +16,10 @@ managedNodeGroups:
     desiredCapacity: 3
     instanceTypes: 
       - "m5.large"  # Specify one or more spot-eligible instance types
-    capacityType: SPOT
     instancesDistribution:
       onDemandBaseCapacity: 0
       onDemandPercentageAboveBaseCapacity: 0
+      spotInstancePools: 0
 
 
 # nodeGroups:
