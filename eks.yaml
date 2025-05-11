@@ -5,23 +5,23 @@ metadata:
   name: expense-1
   region: us-east-1
 
-# nodeGroups:
-#   - name: expense
-#     instanceType: m5.large
-#     desiredCapacity: 3
-#     spot: true
-
 nodeGroups:
-  - name: expense-ng
-    desiredCapacity: 2
-    minSize: 1
-    maxSize: 3
-    instancesDistribution:
-      instanceTypes: ["m5.large"]
-      #   - "m5.large"  # Use array format (with - for items)
-      onDemandBaseCapacity: 0
-      onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
-      spotInstancePools: 2
-    volumeSize: 20
-    ssh:
-      allow: false
+  - name: expense
+    instanceType: m5.large
+    desiredCapacity: 3
+    spot: true
+
+# nodeGroups:
+#   - name: expense-ng
+#     desiredCapacity: 2
+#     minSize: 1
+#     maxSize: 3
+#     instancesDistribution:
+#       instanceTypes: ["m5.large"]
+#       #   - "m5.large"  # Use array format (with - for items)
+#       onDemandBaseCapacity: 0
+#       onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
+#       spotInstancePools: 2
+#     volumeSize: 20
+#     ssh:
+#       allow: false
