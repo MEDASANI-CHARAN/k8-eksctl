@@ -19,7 +19,7 @@ managedNodeGroups:
     instancesDistribution:
       onDemandBaseCapacity: 0
       onDemandPercentageAboveBaseCapacity: 0
-      spotInstancePools: 0
+      spotInstancePools: 2
 
 
 # nodeGroups:
