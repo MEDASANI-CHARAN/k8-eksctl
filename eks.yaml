@@ -28,7 +28,6 @@ metadata:
 #       onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
 #       spotInstancePools: 2
 
-
 nodeGroups:
   - name: expense-ng
     desiredCapacity: 2
