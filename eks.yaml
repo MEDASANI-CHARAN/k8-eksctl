@@ -6,7 +6,7 @@ metadata:
   region: us-east-1
   version: "1.26"
 
-nodeGroups:
+managedNodeGroups:
   - name: expense-ng
     desiredCapacity: 2
     minSize: 1
