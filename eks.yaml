@@ -4,6 +4,22 @@ kind: ClusterConfig
 metadata:
   name: expense
   region: us-east-1
+  version: "1.26"
+
+nodeGroups:
+  - name: expense-ng
+    desiredCapacity: 2
+    minSize: 1
+    maxSize: 3
+    instancesDistribution:
+      instanceTypes: ["m5.large"]
+      #   - "m5.large"  # Use array format (with - for items)
+      onDemandBaseCapacity: 0
+      onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
+      spotInstancePools: 2
+    volumeSize: 20
+    ssh: 
+      allow: false
 
 # nodeGroups:
 #   - name: expense
@@ -28,17 +44,3 @@ metadata:
 #       onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
 #       spotInstancePools: 2
 
-nodeGroups:
-  - name: expense-ng
-    desiredCapacity: 2
-    minSize: 1
-    maxSize: 3
-    instancesDistribution:
-      instanceTypes: ["m5.large"]
-      #   - "m5.large"  # Use array format (with - for items)
-      onDemandBaseCapacity: 0
-      onDemandPercentageAboveBaseCapacity: 20  # 20% On-Demand fallback
-      spotInstancePools: 2
-    volumeSize: 20
-    ssh:
-      allow: false
